@@ -10,6 +10,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/style.css">
+<style>
+  /* Bacteria swimming in the background (styles for my page only) */
+  #bact-bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}
+  #bact-bar{position:fixed;right:16px;bottom:16px;z-index:10;display:flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.94);border:1px solid var(--line);border-radius:999px;
+    padding:6px 6px 6px 14px;font-size:13px;color:var(--ink-soft);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+  #bact-bar button{font:inherit;font-weight:600;color:var(--blue);background:#fff;border:1px solid var(--line);
+    border-radius:999px;padding:4px 12px;cursor:pointer}
+  #bact-bar button:hover{background:#EEF4FF}
+  .rail-link{background:#fff}  /* keeps my link buttons easy to read when bacteria swim behind them */
+  @media (max-width:600px){#bact-bar span{display:none}}
+</style>
 </head>
 <body>
 
@@ -110,6 +122,7 @@
   </div>
 </div>
 
+<script src="bacteria.js" defer></script>
 <script src="../../assets/feedback.js" defer></script>
 </body>
 </html>
